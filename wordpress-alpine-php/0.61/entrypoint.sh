@@ -172,8 +172,8 @@ else
 fi	
 
 
-echo "Starting Redis ..."
-redis-server &
+# echo "Starting Redis ..."
+# redis-server &
 
 echo "Starting SSH ..."
 rc-service sshd start
