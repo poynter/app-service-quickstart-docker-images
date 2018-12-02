@@ -1,7 +1,7 @@
 #
 # Dockerfile for WordPress
 #
-FROM appsvcorg/nginx-fpm:0.4
+FROM appsvcorg/nginx-fpm:php7.2.11
 MAINTAINER Azure App Service Container Images <appsvc-images@microsoft.com>
 # ========
 # ENV vars
@@ -9,7 +9,6 @@ MAINTAINER Azure App Service Container Images <appsvc-images@microsoft.com>
 # ssh
 ENV SSH_PASSWD "root:Docker!"
 #nginx
-ENV NGINX_VERSION 1.14.0
 ENV NGINX_LOG_DIR "/home/LogFiles/nginx"
 #php
 ENV PHP_HOME "/usr/local/etc/php"
@@ -22,7 +21,7 @@ ENV MARIADB_LOG_DIR "/home/LogFiles/mysql"
 ENV PHPMYADMIN_SOURCE "/usr/src/phpmyadmin"
 ENV PHPMYADMIN_HOME "/home/phpmyadmin"
 # redis
-ENV PHPREDIS_VERSION 3.1.2
+ENV PHPREDIS_VERSION 4.2.0
 # wordpress
 ENV WORDPRESS_SOURCE "/usr/src/wordpress"
 ENV WORDPRESS_HOME "/home/site/wwwroot"
